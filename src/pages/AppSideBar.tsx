@@ -108,7 +108,7 @@ const Dashboard: React.FC<DashboardProps> = () => {
               >
                 <Menu className="w-6 h-6 text-gray-500" />
               </button>
-              <h1 className="text-2xl font-semibold text-gray-900">Dashboard</h1>
+          
             </div>
             
             <div className="flex items-center space-x-4">
