@@ -1,10 +1,10 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import type { JSX } from 'react';
-import SidebarV3 from './dashboard/Page'
+import Layout from './dashboard/Layout';
 
 const App = (): JSX.Element => (
     <Routes>
-        <Route path="/" element={<SidebarV3/>}>
+        <Route path="/" element={<Layout/>}>
       </Route>
     </Routes>
 );
