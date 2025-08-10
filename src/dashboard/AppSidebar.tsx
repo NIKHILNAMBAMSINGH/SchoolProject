@@ -100,7 +100,7 @@ const appSidebar = () => {
     items: [
       {
   title: "Student Directory",
-  url: "/Student",
+  url: "/StudentPage",
 },
       {
         title: "Enrollment",

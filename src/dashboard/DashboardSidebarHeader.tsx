@@ -1,10 +1,10 @@
 import React from 'react'
-import { SidebarFooter, SidebarMenu, SidebarMenuButton, SidebarMenuItem, SidebarTrigger } from '../../sidebar'
-import { Input } from '../../input'
-import { Button } from '../../button'
+import { SidebarFooter, SidebarMenu, SidebarMenuButton, SidebarMenuItem, SidebarTrigger } from '../components/ui/sidebar'
+import { Input } from '../components/ui/input'
+import { Button } from '../components/ui/button'
 import { BadgeCheck, Bell, ChevronsUpDown, CreditCard, LogOut, Plus, Sparkles, Sun } from 'lucide-react'
-import { Avatar, AvatarFallback, AvatarImage } from '../../avatar'
-import { DropdownMenu, DropdownMenuContent, DropdownMenuGroup, DropdownMenuItem, DropdownMenuLabel, DropdownMenuSeparator, DropdownMenuTrigger } from '../../dropdown-menu'
+import { Avatar, AvatarFallback, AvatarImage } from '../components/ui/avatar'
+import { DropdownMenu, DropdownMenuContent, DropdownMenuGroup, DropdownMenuItem, DropdownMenuLabel, DropdownMenuSeparator, DropdownMenuTrigger } from '../components/ui/dropdown-menu'
 
 
 const DashboardSidebarHeader = () => {

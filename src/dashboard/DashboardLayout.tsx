@@ -1,9 +1,9 @@
 
-import DashboardSidebarHeader from '@/components/ui/dashboard/sidebar/DashboardSidebarHeader'
+import DashboardSidebarHeader from '@/dashboard/DashboardSidebarHeader'
 import { SidebarInset, SidebarProvider } from '@/components/ui/sidebar'
 import React from 'react'
 import DashboardPage from './DashboardPage'
-import AppSidebar from '@/components/ui/dashboard/sidebar/AppSidebar'
+import AppSidebar from './AppSidebar'
 import { Outlet } from 'react-router-dom'
 
 const Layout = () => {
