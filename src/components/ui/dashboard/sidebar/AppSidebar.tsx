@@ -23,9 +23,12 @@ import {
   ArrowRight,
   AudioWaveform,
   BadgeCheck,
+  BarChart,
+  BarChart3,
   Bell,
   BookOpen,
   Bot,
+  Bus,
   ChevronsUpDown,
   Command,
   CreditCard,
@@ -34,18 +37,22 @@ import {
   Forward,
   Frame,
   GalleryVerticalEnd,
+  GraduationCap,
   LayoutDashboard,
   LogOut,
   Map,
+  MessageSquare,
   MoreHorizontal,
   Package,
   PieChart,
   Plus,
+  Settings,
   Settings2,
   ShoppingCart,
   Sparkles,
   SquareTerminal,
   Trash2,
+  Users,
 } from "lucide-react";
 import {
   Collapsible,
@@ -63,6 +70,8 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { ChevronRight } from 'lucide-react';
+import Logo from '@/dashboard/Logo';
+import { Link } from 'react-router-dom';
 
 
 const appSidebar = () => {
@@ -71,99 +80,241 @@ const appSidebar = () => {
     email: "m@example.com",
     avatar: "/avatars/shadcn.jpg",
   }
- const navMain= [
-    {
-      title: "Playground",
-      url: "#",
-      icon: SquareTerminal,
-      isActive: true,
-      items: [
-        {
-          title: "History",
-          url: "#",
-        },
-        {
-          title: "Starred",
-          url: "#",
-        },
-        {
-          title: "Settings",
-          url: "#",
-        },
-      ],
-    },
-    {
-      title: "Models",
-      url: "#",
-      icon: Bot,
-      items: [
-        {
-          title: "Genesis",
-          url: "#",
-        },
-        {
-          title: "Explorer",
-          url: "#",
-        },
-        {
-          title: "Quantum",
-          url: "#",
-        },
-      ],
-    },
-    {
-      title: "Documentation",
-      url: "#",
-      icon: BookOpen,
-      items: [
-        {
-          title: "Introduction",
-          url: "#",
-        },
-        {
-          title: "Get Started",
-          url: "#",
-        },
-        {
-          title: "Tutorials",
-          url: "#",
-        },
-        {
-          title: "Changelog",
-          url: "#",
-        },
-      ],
-    },
-    {
-      title: "Settings",
-      url: "#",
-      icon: Settings2,
-      items: [
-        {
-          title: "General",
-          url: "#",
-        },
-        {
-          title: "Team",
-          url: "#",
-        },
-        {
-          title: "Billing",
-          url: "#",
-        },
-        {
-          title: "Limits",
-          url: "#",
-        },
-      ],
-    },
-  ]
+ const navMain = [
+  {
+    title: "Dashboard",
+    url: "#",
+    icon: BarChart3,
+    isActive: true,
+    items: [
+      {
+        title: "Overview",
+        url: "/",
+      },
+    ],
+  },
+  {
+    title: "Student Management",
+    url: "#",
+    icon: GraduationCap,
+    items: [
+      {
+  title: "Student Directory",
+  url: "/Student",
+},
+      {
+        title: "Enrollment",
+        url: "#",
+      },
+      {
+        title: "Attendance",
+        url: "#",
+      },
+      {
+        title: "Performance",
+        url: "#",
+      },
+    ],
+  },
+  {
+    title: "Academics",
+    url: "#",
+    icon: BookOpen,
+    items: [
+      {
+        title: "Curriculum",
+        url: "#",
+      },
+      {
+        title: "Timetable",
+        url: "#",
+      },
+      {
+        title: "Examinations",
+        url: "#",
+      },
+      {
+        title: "Assignments",
+        url: "#",
+      },
+      {
+        title: "Report Cards",
+        url: "#",
+      },
+    ],
+  },
+  {
+    title: "Staff Management",
+    url: "#",
+    icon: Users,
+    items: [
+      {
+        title: "Staff Directory",
+        url: "#",
+      },
+      {
+        title: "Attendance",
+        url: "#",
+      },
+      {
+        title: "Leave Management",
+        url: "#",
+      },
+      {
+        title: "Performance",
+        url: "#",
+      },
+    ],
+  },
+  {
+    title: "Communication",
+    url: "#",
+    icon: MessageSquare,
+    items: [
+      {
+        title: "Messages",
+        url: "#",
+      },
+      {
+        title: "Announcements",
+        url: "#",
+      },
+      {
+        title: "Notice Board",
+        url: "#",
+      },
+      {
+        title: "Emergency Alerts",
+        url: "#",
+      },
+    ],
+  },
+  {
+    title: "Finance",
+    url: "#",
+    icon: DollarSign,
+    items: [
+      {
+        title: "Fee Management",
+        url: "#",
+      },
+      {
+        title: "Payments",
+        url: "#",
+      },
+      {
+        title: "Scholarships",
+        url: "#",
+      },
+      {
+        title: "Reports",
+        url: "#",
+      },
+    ],
+  },
+  {
+    title: "Transport",
+    url: "#",
+    icon: Bus,
+    items: [
+      {
+        title: "Routes",
+        url: "#",
+      },
+      {
+        title: "Tracking",
+        url: "#",
+      },
+      {
+        title: "Drivers",
+        url: "#",
+      },
+      {
+        title: "Maintenance",
+        url: "#",
+      },
+    ],
+  },
+  {
+    title: "Resources",
+    url: "#",
+    icon: Package,
+    items: [
+      {
+        title: "Library",
+        url: "#",
+      },
+      {
+        title: "Inventory",
+        url: "#",
+      },
+      {
+        title: "Facilities",
+        url: "#",
+      },
+      {
+        title: "Assets",
+        url: "#",
+      },
+    ],
+  },
+  {
+    title: "Reports & Analytics",
+    url: "#",
+    icon: BarChart,
+    items: [
+      {
+        title: "Academic Reports",
+        url: "#",
+      },
+      {
+        title: "Financial Reports",
+        url: "#",
+      },
+      {
+        title: "Custom Reports",
+        url: "#",
+      },
+      {
+        title: "Analytics Dashboard",
+        url: "#",
+      },
+    ],
+  },
+  {
+    title: "Settings",
+    url: "#",
+    icon: Settings,
+    items: [
+      {
+        title: "School Profile",
+        url: "#",
+      },
+      {
+        title: "User Management",
+        url: "#",
+      },
+      {
+        title: "System Settings",
+        url: "#",
+      },
+      {
+        title: "Backup & Security",
+        url: "#",
+      },
+    ],
+  },
+]
   return (
-    <Sidebar collapsible="icon">
+    <Sidebar >
         <SidebarHeader>
           <SidebarMenu>
            <SidebarMenuItem>
-       
+         <SidebarMenuButton size="lg" asChild>
+  <a href="#">
+    <Logo />
+  </a>
+</SidebarMenuButton>
 </SidebarMenuItem>
           </SidebarMenu>
         </SidebarHeader>
@@ -179,9 +330,9 @@ const appSidebar = () => {
                 >
                   <SidebarMenuItem>
                     <CollapsibleTrigger asChild>
-                      <SidebarMenuButton tooltip={item.title}>
+                      <SidebarMenuButton tooltip={item.title} className="py-2.5">
                         {item.icon && <item.icon />}
-                        <span>{item.title}</span>
+                        <span className="text-base font-medium text-gray-900">{item.title}</span>
                         <ChevronRight className="ml-auto transition-transform duration-200 group-data-[state=open]/collapsible:rotate-90" />
                       </SidebarMenuButton>
                     </CollapsibleTrigger>
@@ -189,11 +340,11 @@ const appSidebar = () => {
                       <SidebarMenuSub>
                         {item.items?.map((subItem) => (
                           <SidebarMenuSubItem key={subItem.title}>
-                            <SidebarMenuSubButton asChild>
-                              <a href={subItem.url}>
-                                <span>{subItem.title}</span>
-                              </a>
-                            </SidebarMenuSubButton>
+                           <SidebarMenuSubButton asChild className="py-2">
+  <Link to={subItem.url}>
+    <span className="text-sm font-normal text-gray-600 group-hover:text-gray-900">{subItem.title}</span>
+  </Link>
+</SidebarMenuSubButton>
                           </SidebarMenuSubItem>
                         ))}
                       </SidebarMenuSub>
@@ -216,17 +367,17 @@ const appSidebar = () => {
                   >
                     <Avatar className="h-8 w-8 rounded-lg">
                       <AvatarImage
-                        src={data.user.avatar}
-                        alt={data.user.name}
+                        src={user.avatar}
+                        alt={user.name}
                       />
                       <AvatarFallback className="rounded-lg">CN</AvatarFallback>
                     </Avatar>
                     <div className="grid flex-1 text-left text-sm leading-tight">
                       <span className="truncate font-semibold">
-                        {data.user.name}
+                        {user.name}
                       </span>
                       <span className="truncate text-xs">
-                        {data.user.email}
+                        {user.email}
                       </span>
                     </div>
                     <ChevronsUpDown className="ml-auto size-4" />
@@ -242,8 +393,8 @@ const appSidebar = () => {
                     <div className="flex items-center gap-2 px-1 py-1.5 text-left text-sm">
                       <Avatar className="h-8 w-8 rounded-lg">
                         <AvatarImage
-                          src={data.user.avatar}
-                          alt={data.user.name}
+                          src={user.avatar}
+                          alt={user.name}
                         />
                         <AvatarFallback className="rounded-lg">
                           CN
@@ -251,10 +402,10 @@ const appSidebar = () => {
                       </Avatar>
                       <div className="grid flex-1 text-left text-sm leading-tight">
                         <span className="truncate font-semibold">
-                          {data.user.name}
+                          {user.name}
                         </span>
                         <span className="truncate text-xs">
-                          {data.user.email}
+                          {user.email}
                         </span>
                       </div>
                     </div>

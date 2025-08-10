@@ -4,6 +4,7 @@ import { SidebarInset, SidebarProvider } from '@/components/ui/sidebar'
 import React from 'react'
 import DashboardPage from './DashboardPage'
 import AppSidebar from '@/components/ui/dashboard/sidebar/AppSidebar'
+import { Outlet } from 'react-router-dom'
 
 const Layout = () => {
   return (
@@ -12,7 +13,7 @@ const Layout = () => {
         <AppSidebar/>
       <SidebarInset>
         <DashboardSidebarHeader/>
-          <DashboardPage/>
+           <Outlet />
       </SidebarInset>
     </SidebarProvider>
     </div>
